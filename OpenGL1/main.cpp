@@ -216,6 +216,7 @@ void initAppState(AppState* app) {
     }
 }
 
+// Główna funkcja - inicjalizuje okno, shadery i uruchamia pętlę renderowania
 int main(void)
 {
     GLFWwindow* window;
@@ -246,17 +247,19 @@ int main(void)
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     glfwMakeContextCurrent(window);
-    gladLoadGL();
+    gladLoadGL(); // inicjalizacja OpenGL
     glfwSwapInterval(1);
 
-    glEnable(GL_DEPTH_TEST);
+    glEnable(GL_DEPTH_TEST); // włączenie testu głębi - obiekty bliżej zasłaniają dalsze 
     glDepthFunc(GL_LESS);
     glDisable(GL_CULL_FACE);
 
+    // tworzenie bufora z danymi wierzchołków bryły (pozycje i kolory)
     glGenBuffers(1, &vertex_buffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
+    // tworzenie shaderów
     vertex_shader = glCreateShader(GL_VERTEX_SHADER);
     glShaderSource(vertex_shader, 1, &vertex_shader_text, NULL);
     glCompileShader(vertex_shader);
@@ -265,6 +268,7 @@ int main(void)
     glShaderSource(fragment_shader, 1, &fragment_shader_text, NULL);
     glCompileShader(fragment_shader);
 
+    // połączenie shaderów w jeden program renderujący
     program = glCreateProgram();
     glAttachShader(program, vertex_shader);
     glAttachShader(program, fragment_shader);
@@ -281,12 +285,12 @@ int main(void)
     glVertexAttribPointer(vcol_location, 3, GL_FLOAT, GL_FALSE,
         sizeof(vertices[0]), (void*)(sizeof(float) * 3));
 
-    // Główna pętla programu - wykonuje się dopóki okno jest otwarte
+    // Główna pętla renderowania - rysuje obraz 60 razy na sekundę
     double lastTime = glfwGetTime();
     
     while (!glfwWindowShouldClose(window))
     {
-        // obliczanie czasu między klatkami (do płynnego ruchu)
+        // obliczanie czasu między klatkami do płynnego ruchu
         double currentTime = glfwGetTime();
         float deltaTime = (float)(currentTime - lastTime);
         lastTime = currentTime;
@@ -322,35 +326,36 @@ int main(void)
             app.camera.position[2] += right[2] * app.moveSpeed * deltaTime;
         }
 
-        // Obliczanie macierzy rzutowania (perspektywa)
+        // Obliczanie macierzy rzutowania (perspektywa) - przekształca 3D na 2D ekran
         mat4x4 P;
         float fov_rad = app.fov * (float)M_PI / 180.0f;
         float near = 0.1f;
         float far = 100.0f;
         mat4x4_perspective(P, fov_rad, ratio, near, far);
 
-        // Obliczanie macierzy widoku (pozycja i kierunek kamery)
+        // Obliczanie macierzy widoku - uwzględnia pozycję i kierunek kamery
         mat4x4 V;
         calculateViewMatrix(V, &app.camera);
 
-        // Rysowanie wszystkich brył
+        // Rysowanie wszystkich brył - dla każdej obliczamy jak wygląda z perspektywy kamery
         glUseProgram(program);
         
         for (int i = 0; i < app.numObjects; i++) {
             mat4x4 M, MVP;
             
-            // przesunięcie bryły do jej pozycji
+            // przesunięcie bryły do jej pozycji w świecie 3D
             mat4x4_identity(M);
             mat4x4_translate_in_place(M, app.objectPositions[i][0],
                                           app.objectPositions[i][1],
                                           app.objectPositions[i][2]);
             
-            // obliczanie macierzy MVP (model * view * projection)
+            // MVP = macierz która przekształca wierzchołki 3D na pozycje na ekranie 2D
+            // (Model * View * Projection)
             mat4x4_mul(MVP, V, M);
             mat4x4_mul(MVP, P, MVP);
             
             glUniformMatrix4fv(mvp_location, 1, GL_FALSE, (const GLfloat*)MVP);
-            glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices) / sizeof(vertices[0]));
+            glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices) / sizeof(vertices[0])); // rysowanie bryły
         }
 
         glfwSwapBuffers(window); // wyświetlenie narysowanej klatki
