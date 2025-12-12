@@ -1,0 +1,19 @@
+﻿  main.cpp
+C:\Users\mateu\source\repos\camera2\main.cpp(26,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\mateu\source\repos\camera2\main.cpp(182,37): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\mateu\source\repos\camera2\main.cpp(183,37): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\mateu\source\repos\camera2\main.cpp(184,37): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+  OpenGL2.vcxproj -> C:\Users\mateu\source\repos\camera2\x64\Debug\OpenGL2.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  C:\Users\mateu\source\repos\camera2\shaders\blinn_phong.frag
+  C:\Users\mateu\source\repos\camera2\shaders\blinn_phong.vert
+  C:\Users\mateu\source\repos\camera2\shaders\diffuse.frag
+  C:\Users\mateu\source\repos\camera2\shaders\diffuse.vert
+  C:\Users\mateu\source\repos\camera2\shaders\flag.frag
+  C:\Users\mateu\source\repos\camera2\shaders\flag.vert
+  C:\Users\mateu\source\repos\camera2\shaders\specular.frag
+  C:\Users\mateu\source\repos\camera2\shaders\specular.vert
+  C:\Users\mateu\source\repos\camera2\shaders\texture.frag
+  C:\Users\mateu\source\repos\camera2\shaders\texture.vert
+  10 File(s) copied

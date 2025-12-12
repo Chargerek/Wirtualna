@@ -1,0 +1,27 @@
+﻿  main.cpp
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(25,18): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(190,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(191,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(192,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(198,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(200,51): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(206,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(208,51): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(214,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(223,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(224,51): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(230,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(231,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\main.cpp(232,45): warning C4244: "=": konwersja z "int" do "unsigned char", możliwa utrata danych
+  OpenGL2.vcxproj -> C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\x64\Debug\OpenGL2.exe
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\blinn_phong.frag
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\blinn_phong.vert
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\diffuse.frag
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\diffuse.vert
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\flag.frag
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\flag.vert
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\specular.frag
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\specular.vert
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\texture.frag
+  C:\Users\damia\Desktop\Studia\SEMESTR 5\Witrualna\4 projekt\virtualka-main\camera2\shaders\texture.vert
+  10 File(s) copied
