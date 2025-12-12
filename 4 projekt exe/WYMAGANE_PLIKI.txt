@@ -1,0 +1,64 @@
+========================================
+WYMAGANE PLIKI DO URUCHOMIENIA NA INNYM KOMPUTERZE
+========================================
+
+⚠️ UWAGA: Sam plik .exe NIE WYSTARCZY!
+
+Program wymaga następujących plików (wszystkie w tym samym katalogu):
+
+1. OpenGL2.exe
+   └─ Główny plik wykonywalny programu
+
+2. glfw3.dll
+   └─ Biblioteka GLFW (wymagana do działania okna OpenGL)
+
+3. Folder "shaders" z plikami:
+   ├─ diffuse.vert
+   ├─ diffuse.frag
+   ├─ specular.vert
+   ├─ specular.frag
+   ├─ blinn_phong.vert
+   ├─ blinn_phong.frag
+   ├─ texture.vert
+   ├─ texture.frag
+   ├─ flag.vert
+   └─ flag.frag
+
+========================================
+STRUKTURA KATALOGU:
+========================================
+
+TwójFolder/
+├── OpenGL2.exe
+├── glfw3.dll
+└── shaders/
+    ├── diffuse.vert
+    ├── diffuse.frag
+    ├── specular.vert
+    ├── specular.frag
+    ├── blinn_phong.vert
+    ├── blinn_phong.frag
+    ├── texture.vert
+    ├── texture.frag
+    ├── flag.vert
+    └── flag.frag
+
+========================================
+WYMAGANIA SYSTEMOWE:
+========================================
+
+- Windows 10 lub nowszy (64-bit)
+- Sterowniki graficzne z obsługą OpenGL 2.0+
+- (OpenGL jest częścią Windows, ale wymaga aktualnych sterowników karty graficznej)
+
+========================================
+CO SKOPIOWAĆ NA INNY KOMPUTER:
+========================================
+
+Skopiuj CAŁY katalog Release lub minimum:
+- OpenGL2.exe
+- glfw3.dll
+- Cały folder "shaders" (z wszystkimi plikami)
+
+========================================
+
