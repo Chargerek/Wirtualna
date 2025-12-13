@@ -275,9 +275,7 @@ GLuint createYellowTexture(int width, int height) {
     return texture;
 }
 
-// ============================================================================
-// SEKCJA 4: STRUKTURY KAMERY I APLIKACJI
-// ============================================================================
+// SEKCJA 4: STRUKTURY KAMERY I APLIKACJ
 typedef struct {
     vec3 position;
     float yaw;
@@ -313,9 +311,10 @@ typedef struct {
     int numObjects;
 } AppState;
 
-// ============================================================================
+
 // SEKCJA 5: FUNKCJE POMOCNICZE KAMERY
-// ============================================================================
+
+
 void calculateViewMatrix(mat4x4 V, const Camera* camera) {
     mat4x4 Wc, T, Ry, Rx;
     mat4x4_translate(T, camera->position[0], camera->position[1], camera->position[2]);
@@ -340,9 +339,8 @@ void getCameraRight(vec3 right, const Camera* camera) {
     right[2] = -sinf(camera->yaw);
 }
 
-// ============================================================================
 // SEKCJA 6: OBSŁUGA WEJŚCIA
-// ============================================================================
+
 static void error_callback(int error, const char* description) {
     (void)error;
     fprintf(stderr, "Error: %s\n", description);
@@ -415,9 +413,8 @@ static void cursor_position_callback(GLFWwindow* window, double xpos, double ypo
     }
 }
 
-// ============================================================================
 // SEKCJA 7: INICJALIZACJA
-// ============================================================================
+
 void initAppState(AppState* app) {
     app->camera.position[0] = 0.0f;
     app->camera.position[1] = 0.0f;
@@ -476,9 +473,9 @@ void initAppState(AppState* app) {
     app->objects[4].color[0] = 1.0f; app->objects[4].color[1] = 0.0f; app->objects[4].color[2] = 1.0f;
 }
 
-// ============================================================================
+
 // SEKCJA 8: GŁÓWNA FUNKCJA
-// ============================================================================
+
 int main(void) {
     AppState app;
     initAppState(&app);
@@ -684,7 +681,7 @@ int main(void) {
             }
         }
         
-        // Wizualizacja światła punktowego jako kostki (wymaganie zadania)
+        // Wizualizacja światła punktowego jako kostki 
         // Używamy żółtej tekstury żeby wyglądało jak słońce
         glUseProgram(programs[3]);
         mat4x4_identity(M);
